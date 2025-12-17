@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Daily Weather Reports</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-cloud-sun"></i> Weather App</h1>
+            <p>Get real-time weather updates for any location</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="location-input" placeholder="Enter city name or zip code..." autocomplete="off">
+                <button id="search-btn" class="search-btn" aria-label="Search for weather">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button id="current-location-btn" class="location-btn" aria-label="Use current location">
+                <i class="fas fa-map-marker-alt"></i> Use Current Location
+            </button>
+        </div>
+
+        <div class="weather-container">
+            <!-- Current Weather Section -->
+            <div class="current-weather" id="current-weather">
+                <div class="loading" id="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading weather data...</p>
+                </div>
+            </div>
+
+            <!-- Weather Forecast Section -->
+            <div class="forecast-section">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast-container" id="forecast-container">
+                    <!-- Forecast cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2025 Weather App. Powered by OpenWeatherMap API</p>
+            <p>Developed by <a href="https://github.com/sohagabir112" target="_blank">Sohag Abir</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
